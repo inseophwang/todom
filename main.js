@@ -7,22 +7,28 @@ const todos = [];
 // Keep the same name so that your other function still calls it!
 function printTodo(todo) {
   // Use `document.createElement` to make an li
-
+  const makeLi = document.createElement('li');
 
   // Put the ul that's already in our html file in a variable.
-
+  const makeUl = document.querySelector('.todo-list');
 
   // Append the li we made to the ul as the last child.
-
+  makeLi.appendChild(makeUl);
 
 }
 
 
 // Add an event listener to the ADD button to run a function that we'll write shortly that adds todos.
+const addButton = document.querySelector('.add-todo')
 
+addButton.addEventListener('click', addingToDo)
 
 // Now write the function that the event listener will run. It will take what's in the user input and add it to the todo list array.
 
+function addingToDo(){
+
+
+}
 /*
 
 Here's what it'll do, in order. Feel free to put these comments in your function!
