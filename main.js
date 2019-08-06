@@ -67,11 +67,18 @@ Here's what it'll do, in order. Feel free to put these comments in your function
 
 const removeButton = document.querySelector('.remove-todo')
 
+
 removeButton.addEventListener('click', removingTodo);
 
 // Now write the function that the event listener will run. It will take what's in the user input and remove it from the todo list array.
 function removingTodo() {
+  
+  const removeTodoInput = document.querySelector('.index-input');
+  const removeIndex = removeTodoInput.value;
+  
+  removeTodo(removeIndex)
 
+   erasefunc()
 }
 /* Here's what it'll do, in order. Feel free to put these comments in your function!
 
@@ -87,7 +94,12 @@ function removingTodo() {
 */
 
 // Write a function that erases everything from the list.
-
+function erasefunc(){
+  const grabUl = document.querySelector('.todo-list')
+  grabUl.remove();
+  // clearList();
+  printList();
+}
 /*
 
 Here's what it'll do, in order. Feel free to put these comments in your function!
