@@ -12,10 +12,14 @@ function printTodo(todo) {
   // Put the ul that's already in our html file in a variable.
   const makeUl = document.querySelector('.todo-list');
 
+  makeLi.innerText = todo
+
+
   // Append the li we made to the ul as the last child.
-  makeLi.appendChild(makeUl);
+  makeUl.appendChild(makeLi);
 
 }
+
 
 
 // Add an event listener to the ADD button to run a function that we'll write shortly that adds todos.
@@ -25,9 +29,12 @@ addButton.addEventListener('click', addingToDo)
 
 // Now write the function that the event listener will run. It will take what's in the user input and add it to the todo list array.
 
-function addingToDo(){
-
-
+function addingToDo(user){
+  const addToDoInput = document.querySelector('.todo-input');
+  const userText = addToDoInput.value;
+  addTodo(userText);
+  printTodo(userText);
+  
 }
 /*
 
@@ -35,7 +42,7 @@ Here's what it'll do, in order. Feel free to put these comments in your function
 
 
 
-// Place in a variable the node element for the add todo input box.
+// Place in a variable the node element for the add todo input box.//
 
 // Place in a variable the text that the user typed into that input box. You can "dot off" the variable above to find a property that's on that element. If you're not sure if you have it, try console logging what you've got!
 
@@ -49,13 +56,23 @@ Here's what it'll do, in order. Feel free to put these comments in your function
   inputBox.value = '';
 
 */
+  // const addToDoInput = document.querySelector('.todo-input');
+  // const userText = addToDoInput.value;
+  // addTodo(userText);
+  // printTodo(userText);
+
 
 
 // Add an event listener to the REMOVE button to run a function that we'll write shortly that removes todos.
 
+const removeButton = document.querySelector('.remove-todo')
+
+removeButton.addEventListener('click', removingTodo);
 
 // Now write the function that the event listener will run. It will take what's in the user input and remove it from the todo list array.
+function removingTodo() {
 
+}
 /* Here's what it'll do, in order. Feel free to put these comments in your function!
 
 
